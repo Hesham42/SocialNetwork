@@ -1,3 +1,4 @@
+https://github.com/mschwarzmueller/laravel-basics-youtube/blob/master/app/Http/routes.php
 composer create-project laravel/laravel test
 composer create-project laravel/laravel your-project-name 5.1.*
 composer install --ignore-platform-reqs
@@ -21,6 +22,10 @@ php artisan make:controller ProductController --resource --model=Product
 create modul 
 ++++++++++++
 1- php artisan make:model User --migration
+2- php artisan make:controller UserController
+
+
+
  
 
   
