@@ -1,0 +1,28 @@
+composer create-project laravel/laravel test
+composer create-project laravel/laravel your-project-name 5.1.*
+composer install --ignore-platform-reqs
+composer update 
+sudo chmod -R 777 storage
+sudo chmod -R 777 bootstrap/cache
+php artisan key:generate
+php artisan config:cache
+
+
+php artisan make:controller adminController
+when you have problem in passwrod in root 
+1- restart appache then this comand make password ''
+2- php artisan config:clear
+3- php artisan migrate
+4- php artisan make:migration create_proudct --create=proudct
+5- php artisan migrate:rollback
+6- php artisan make:model Product
+php artisan make:controller ProductController --resource --model=Product
++++++++++++
+create modul 
+++++++++++++
+1- php artisan make:model User --migration
+ 
+
+  
+
+
