@@ -26,7 +26,7 @@
                                         <a href="#">like</a>
                                         <a href="#">Dislike</a>
                                         <a href="#">Edite</a>
-                                        <a href="#">Delete</a>
+                                        <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
                                 </div>
                             </article>
                     @endforeach

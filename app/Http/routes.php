@@ -35,3 +35,8 @@ Route::post('/postCreatePost', [
     'as' => 'post.create',
     'middleware' => 'auth',
 ]);
+Route::get('/delete-post/{post_id}', [
+    'uses' => 'PostController@getDeletePost',
+    'as' => 'post.delete',
+    'middleware' => 'auth',
+]);
