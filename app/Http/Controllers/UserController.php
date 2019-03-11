@@ -18,7 +18,8 @@ class UserController extends Controller
         $this->validate($request, [
             'firstName' => 'required|max:25',
             'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)/',
+            'password' => 'required|min:4',
+            // |regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)/
         ]);
 
         $email = $request['email'];

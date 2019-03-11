@@ -30,3 +30,8 @@ Route::get('/dashboard', [
     'as' => 'dashboard',
     'middleware' => 'auth',
 ]);
+Route::post('/postCreatePost', [
+    'uses' => 'PostController@postCreatePost',
+    'as' => 'post.create',
+    'middleware' => 'auth',
+]);
