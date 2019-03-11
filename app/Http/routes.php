@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::post('/signup', [
     'uses' => 'UserController@postSignUp',
@@ -39,4 +39,9 @@ Route::get('/delete-post/{post_id}', [
     'uses' => 'PostController@getDeletePost',
     'as' => 'post.delete',
     'middleware' => 'auth',
+]);
+
+Route::get('/logout', [
+    'uses' => 'UserController@getLogout',
+    'as' => 'logout',
 ]);

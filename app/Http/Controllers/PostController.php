@@ -10,10 +10,10 @@ class PostController extends Controller
 {
     public function getDashboard()
     {
-        $post = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->get();
 
         return view('dashboard', [
-            'posts' => $post,
+            'posts' => $posts,
         ]);
     }
 
